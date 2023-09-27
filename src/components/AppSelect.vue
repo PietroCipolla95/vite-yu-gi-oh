@@ -11,6 +11,12 @@ export default {
     },
     mounted() {
         state.findArchetype()
+    },
+    methods: {
+        selectArchetype() {
+
+
+        }
     }
 }
 </script>
@@ -18,8 +24,7 @@ export default {
 <template>
     <div class="my-3 w-25 my_m">
         <label for="archetype" class="form-label bg-white p-3 px-5 rounded fw-bolder">Archetypes</label>
-        <select class="form-select form-select-lg" name="archetype" id="archetype">
-            <option>Select one</option>
+        <select class="form-select form-select-lg" name="archetype" id="archetype" v-model="findArchetype">
             <option v-for="archetype in state.archetypes" :value="archetype.archetype_name">
                 {{ archetype.archetype_name }}
             </option>
