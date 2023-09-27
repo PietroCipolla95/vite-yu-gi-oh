@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const state = reactive({
 
-    base_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
+    base_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0',
     name: null,
     archetype: null,
     card_images: null,
@@ -14,6 +14,7 @@ export const state = reactive({
             .then(response => {
 
                 console.log(response);
+                this.cards = response.data.data
 
             })
 
