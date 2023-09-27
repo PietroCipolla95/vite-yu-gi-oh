@@ -4,7 +4,7 @@ import { state } from "../components/state.js"
 export default {
     name: 'AppSelect',
 
-    emits: ['filterArchetype'],
+    emits: ['shownFiltered'],
 
     data() {
         return {
@@ -31,7 +31,6 @@ export default {
             console.log(this.filterUrl);
 
         },
-
     }
 
 }

@@ -35,4 +35,23 @@ export const state = reactive({
 
     },
 
+    filterCards() {
+
+        this.base_url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
+
+        axios.get(this.base_url, {
+            params: {
+                archetype: 'Alien',
+                num: 30,
+                offset: 0,
+            }
+        })
+            .then(response => {
+
+                this.filteredLink = response;
+                console.log(this.filteredLink);
+
+            })
+    }
+
 })

@@ -20,6 +20,7 @@ export default {
     mounted() {
         state.findData();
         state.findArchetype();
+        state.filterCards();
     },
 
 }
