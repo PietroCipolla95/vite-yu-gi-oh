@@ -17,13 +17,21 @@ export default {
     },
 
     methods: {
-        filterArchetype(filter) {
 
-            filter = archetype.archetype_name
+        shownFiltered(filter) {
 
-            console.log('stai filtrando...');
-            console.log(this.filter);
-        }
+            filter = archetype.archetype_name;
+
+            console.log('stai filtrando...', this.filter);
+
+            this.base_url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=';
+
+            this.filterUrl = this.base_url + `${this.filter}`;
+
+            console.log(this.filterUrl);
+
+        },
+
     }
 
 }
@@ -32,8 +40,7 @@ export default {
 <template>
     <div class="my-3 w-25 my_m">
         <label for="archetype" class="form-label bg-white p-3 px-5 rounded fw-bolder">Archetypes</label>
-        <select class="form-select form-select-lg" name="archetype" id="archetype" v-model="filter"
-            @change="filterArchetype">
+        <select class="form-select form-select-lg" name="archetype" id="archetype" v-model="filter" @change="shownFiltered">
             <option value="">Select archetype</option>
             <option v-for="archetype in state.archetypes" :value="archetype.archetype_name">
                 {{ archetype.archetype_name }}
