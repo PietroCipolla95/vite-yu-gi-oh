@@ -20,15 +20,15 @@ export default {
 
         shownFiltered(filter) {
 
+            state.filterCards();
+
             filter = archetype.archetype_name;
+
+            filter = archetype;
 
             console.log('stai filtrando...', this.filter);
 
-            this.base_url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=';
 
-            this.filterUrl = this.base_url + `${this.filter}`;
-
-            console.log(this.filterUrl);
 
         },
     }

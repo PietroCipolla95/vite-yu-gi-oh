@@ -41,7 +41,7 @@ export const state = reactive({
 
         axios.get(this.base_url, {
             params: {
-                archetype: 'Alien',
+                archetype: '',
                 num: 30,
                 offset: 0,
             }
@@ -50,6 +50,8 @@ export const state = reactive({
 
                 this.filteredLink = response;
                 console.log(this.filteredLink);
+
+                return this.filteredLink
 
             })
     }
