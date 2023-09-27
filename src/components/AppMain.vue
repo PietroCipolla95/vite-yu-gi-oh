@@ -16,7 +16,8 @@ export default {
         }
     },
     mounted() {
-        state.findData()
+        state.findData(),
+            state.findArchetype()
     }
 
 }
