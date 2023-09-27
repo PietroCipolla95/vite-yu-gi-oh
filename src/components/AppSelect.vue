@@ -24,8 +24,6 @@ export default {
 
             filter = archetype.archetype_name;
 
-            filter = archetype;
-
             console.log('stai filtrando...', this.filter);
 
 
