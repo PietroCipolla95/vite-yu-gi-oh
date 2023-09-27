@@ -7,7 +7,6 @@ export const state = reactive({
     name: null,
     archetype: null,
     card_images: null,
-    filter: '',
 
     findData() {
 

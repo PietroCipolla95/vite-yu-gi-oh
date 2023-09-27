@@ -8,7 +8,8 @@ export default {
 
     data() {
         return {
-            state
+            state,
+            filter: '',
         }
     },
     mounted() {
@@ -16,12 +17,12 @@ export default {
     },
 
     methods: {
-        filterArchetype() {
+        filterArchetype(filter) {
 
-            let filter = archetype.archetype_name
+            filter = archetype.archetype_name
 
             console.log('stai filtrando...');
-            console.log(filter);
+            console.log(this.filter);
         }
     }
 
