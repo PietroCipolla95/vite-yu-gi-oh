@@ -31,7 +31,7 @@ export default {
             <AppSelect></AppSelect>
 
 
-            <div class="row my_bg mt-5 px-2 pt-4">
+            <div class="row my_bg px-2 pt-4 rounded">
                 <AppCards :card="card" v-for="card in state.cards"></AppCards>
             </div>
         </div>

@@ -16,8 +16,8 @@ export default {
 </script>
 
 <template>
-    <div class="my-3">
-        <label for="archetype" class="form-label">Archetypes</label>
+    <div class="my-3 w-25 my_m">
+        <label for="archetype" class="form-label bg-white p-3 px-5 rounded fw-bolder">Archetypes</label>
         <select class="form-select form-select-lg" name="archetype" id="archetype">
             <option>Select one</option>
             <option v-for="archetype in state.archetypes" :value="archetype.archetype_name">
@@ -28,4 +28,8 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.my_m {
+    margin-left: - .8rem;
+}
+</style>
