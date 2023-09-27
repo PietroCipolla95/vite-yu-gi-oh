@@ -10,15 +10,17 @@ export default {
         AppCards,
         AppSelect,
     },
+
     data() {
         return {
             state
         }
     },
+
     mounted() {
-        state.findData(),
-            state.findArchetype()
-    }
+        state.findData();
+        state.findArchetype();
+    },
 
 }
 </script>
