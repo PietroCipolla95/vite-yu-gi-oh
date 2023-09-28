@@ -8,14 +8,21 @@ export const state = reactive({
     archetype: null,
     card_images: null,
 
-    findData() {
+    findData(archetype) {
 
-        this.base_url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0';
+        this.base_url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
-        axios.get(this.base_url)
+        axios.get(this.base_url, {
+            params: {
+                archetype: archetype,
+                num: 50,
+                offset: 0,
+            }
+        })
             .then(response => {
 
                 this.cards = response.data.data
+                console.log(this.cards);
 
             })
 
@@ -29,28 +36,9 @@ export const state = reactive({
             .then(response => {
 
                 this.archetypes = response.data
-                console.log(this.archetypes);
 
             })
 
     },
-
-    filterCards(archetype) {
-
-        this.base_url = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
-
-        axios.get(this.base_url, {
-            params: {
-                archetype: archetype,
-                num: 30,
-                offset: 0,
-            }
-        })
-            .then(response => {
-
-                console.log(response);
-
-            })
-    }
 
 })

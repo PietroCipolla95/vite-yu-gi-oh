@@ -20,8 +20,8 @@ export default {
 
         shownFiltered(filter) {
 
-            state.filterCards(this.filter);
             filter = archetype.archetype_name;
+            state.findData(this.filter);
             console.log('stai filtrando...', this.filter);
 
         },
