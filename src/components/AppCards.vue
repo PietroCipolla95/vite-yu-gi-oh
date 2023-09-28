@@ -12,9 +12,6 @@ export default {
             state
         }
     },
-    mounted() {
-        state.findData()
-    }
 
 }
 </script>

@@ -20,13 +20,9 @@ export default {
 
         shownFiltered(filter) {
 
-            state.filterCards();
-
+            state.filterCards(this.filter);
             filter = archetype.archetype_name;
-
             console.log('stai filtrando...', this.filter);
-
-
 
         },
     }
